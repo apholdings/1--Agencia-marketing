@@ -7,8 +7,10 @@ import LogoCloud from "components/home/LogoCloud"
 import UseCases from "components/home/UseCases"
 import Footer from "components/navigation/Footer"
 import Navbar from "components/navigation/Navbar"
+import Scroll from "components/SmoothScrollbar"
 import Layout from "hocs/layouts/Layout"
 import { useEffect } from "react"
+
 
 function Home(){
     useEffect(()=>{
@@ -17,7 +19,7 @@ function Home(){
     return(
         <Layout>
             <Navbar/>
-            <div className="pt-28">
+            <div data-scroll-section className="pt-28">
                 <Header/>
                 <Incentives/>
                 <UseCases/>

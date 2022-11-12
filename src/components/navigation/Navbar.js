@@ -1,7 +1,7 @@
 import {connect} from 'react-redux'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import {useState, Fragment } from 'react'
+import {useState, Fragment, useEffect } from 'react'
 import {NavLink,Link} from 'react-router-dom'
 import loading_dots from 'assets/img/loading-dots.gif'
 import logo_boomslag from 'assets/img/boomslag-black.png'
@@ -67,7 +67,7 @@ function Navbar(){
     const [open, setOpen] = useState(false)
 
     return(
-        <nav id='navbar' className='w-full py-6 top-0 transition duration-300 ease-in-out z-40 fixed'>
+        <nav data-scroll data-scroll-id="hey" id='navbar' className='w-full py-6 top-0 transition duration-300 ease-in-out z-40 fixed'>
             <div className="px-4 sm:px-6">
                 <div className="-ml-4 -mt-2 hidden lg:flex flex-wrap items-center justify-between sm:flex-nowrap md:px-14 px-2">
                     <Link to='/' className="ml-4 mt-2">

@@ -7,7 +7,7 @@ var options = {
 
 const Scroll = () => {
     useEffect(()=>{
-        Scrollbar.init(document.body, options);
+        Scrollbar.init(document.getElementById('layout'), options);
     },[])
     return null
 }
